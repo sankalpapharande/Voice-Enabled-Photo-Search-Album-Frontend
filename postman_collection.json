@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "a3a67823-2d2d-40e9-9d20-0f395fb5eee1",
+		"name": "CCBD HW2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Search Call",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "service",
+							"value": "execute-api",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "<Add your AWS Secret Key>",
+							"type": "string"
+						},
+						{
+							"key": "accessKey",
+							"value": "<Add your AWS Access Key>",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "us-east-1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "image/png",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "x-amz-meta-customLabels",
+						"value": "Dog",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://njorq87tqc.execute-api.us-east-1.amazonaws.com/v2/search?q=get me pics of Cat",
+					"protocol": "https",
+					"host": [
+						"njorq87tqc",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"v2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "get me pics of Cat"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Call",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
