@@ -25,4 +25,5 @@ the search.
 (STT) in real time , then use the transcribed text to perform the search,11
 using the same API like in the previous steps.
 
-
+## Deployment of the code to AWS
+Created AWS CodePipeline using buildspec.yml which directly deploys code changes from GitHub to AWS S3 Bucket where frontend is hosted
