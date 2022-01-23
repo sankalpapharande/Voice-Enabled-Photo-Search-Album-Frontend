@@ -1,6 +1,6 @@
 Type: AWS::OpenSearchService::Domain
 Properties: 
-  AccessPolicies: '{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"AWS":"*"},"Action":"es:*","Resource":"arn:aws:es:us-east-1:877755470769:domain/photos-2/*"}]}'
+  AccessPolicies: '{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"AWS":"*"},"Action":"es:*","Resource":"arn:aws:es:us-east-1:<AWS Account ID>:domain/<OpenSearch Index Name>/*"}]}'
   AdvancedOptions: 
     indices.fielddata.cache.size: '20'
     indices.query.bool.max_clause_count: '1024'
@@ -30,7 +30,7 @@ Properties:
     VolumeSize: 10
   EncryptionAtRestOptions: 
     Enabled: true
-    KmsKeyId: arn:aws:kms:us-east-1:877755470769:key/4d5ee49d-5a80-4bda-907e-4b6df29ac20c
+    KmsKeyId: arn:aws:kms:us-east-1:<AWS Account ID>:key/<Key ID from OpenSearch>
   EngineVersion: OpenSearch_1.0
   NodeToNodeEncryptionOptions: 
     Enabled: true
